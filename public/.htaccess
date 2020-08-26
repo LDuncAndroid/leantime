@@ -1,5 +1,7 @@
 RewriteEngine On
 
+RewriteBase /
+
 #Uncomment and update if Leantime runs in a subfolder
 #RewriteBase /leantime/
 
@@ -18,7 +20,4 @@ RewriteRule ^update/([^/\.]+)/?$ index.php?update=true
 RewriteRule ^/?$ index.php?act=dashboard.show
 RewriteRule ^([^/\.]+)/([^/\.]+)/?$ index.php?act=$1.$2 [QSA]
 RewriteRule ^([^/\.]+)/([^/\.]+)/([^/\.]+)/?$ index.php?act=$1.$2&id=$3 [QSA]
-
-
-
 
